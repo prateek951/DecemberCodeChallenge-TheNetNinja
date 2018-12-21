@@ -1,0 +1,277 @@
+
+/* GLOBAL STYLES */
+body {
+  background: #333;
+  padding-top: 5em;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.typewriter h1 {
+  color: green;
+  font-family: monospace;
+  font-size: 50px;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+
+  @keyframes twinkle{
+        0%,100%{
+            opacity:1;
+        }
+        50%{
+            opacity:0;
+        }
+    }
+
+    @keyframes snowfall{
+        0%{
+            transform:translate(0px,0px);
+            opacity:1;
+       }
+
+        100%{
+            opacity:0;
+            transform: translate(80px, 150px) ;
+        }
+    }
+    @keyframes lightson{
+        from{opacity:0;}
+        to{opacity:1;}
+    }
+    @keyframes dimlight{
+        0%, 100%{opacity:1;}
+        50%{opacity:0.95;}
+    }
+    @keyframes sleighpath{
+        0%{
+            opacity:0 ;
+            transform:translate(-3000px,1000px);
+        }
+
+        30%{
+            opacity:1 ;
+            transform:translate(0,0px);
+        }
+        31%{
+            opacity:1;
+            transform:translate(0px,0px) ;
+        }
+        35%{
+            opacity:1 ;
+            transform:translate(0,-5px);
+        }
+        40%{
+            opacity:1 ;
+            transform:translate(0,5px);
+        }
+        45%{
+            opacity:1 ;
+            transform:translate(0,0);
+        }
+        50%{
+            opacity:1 ;
+            transform:translate(0,5px);
+        }
+        55%{
+            opacity:1 ;
+            transform:translate(0,0);
+        }
+        60%{
+            opacity:1 ;
+            transform:translate(0,5px);
+        }
+        65%{
+            opacity:1 ;
+            transform:translate(0,0);
+        }
+        70%{
+            opacity:1 ;
+            transform:translate(0,5px);
+        }
+        75%{
+            opacity:1 ;
+            transform:translate(0,0);
+        }
+        80%{
+            opacity:1 ;
+            transform:translate(0,0);
+        }
+        100%{
+            opacity:0 ;
+            transform:translate(3000px,-1000px);
+        }
+    }
+    #moon{
+        animation: dimlight 4s ease infinite;
+    }
+    #Layer_15, #OBJECTS{
+            opacity:0;
+            animation: lightson 1s ease 5s forwards;
+    }
+    #star1{
+        animation: twinkle 2s ease infinite ;
+    }
+
+    #star2{
+        animation: twinkle 4s ease 1s infinite ;
+    }
+
+    #star3{
+        animation: twinkle 4s ease 0.5s infinite ;
+    }
+
+    #star4{
+        animation: twinkle 3s ease 2s infinite ;
+    }
+    #sleigh{
+        opacity:0;
+        animation: sleighpath 5s ease 1s forwards  ;
+    }
+    #snow1{
+        animation: snowfall 2s infinite;
+    }
+    #snow2{
+        animation: snowfall 1s  0.25s infinite;
+    }
+    #snow3{
+        animation: snowfall 1s  0.5s infinite;
+    }
+    #snow4{
+        animation: snowfall 1s  1s infinite;
+    }
+    #snow5{
+        animation: snowfall 2s 1.25s infinite ;
+    }
+    #snow6{
+        animation: snowfall 1.5s 1.5s infinite ;
+    }
+    #snow7{
+        animation: snowfall 0.5s  0.4s infinite;
+    }
+    #snow8{
+        animation: snowfall 0.5s 1s infinite ;
+    }
+    #snow9{
+        animation: snowfall 1.5s 0.5s infinite ;
+    }
+    #snow10{
+        animation: snowfall 1.5s 1s infinite ;
+    }
+    #snow11{
+        animation: snowfall 0.5s 0.25s infinite ;
+    }
+.container-svg{
+  width:100%;
+  overflow:hidden;
+}
+
+@media screen and (max-width:700px){
+  .container-svg{
+    text-align:center ;
+    height: 100vh ;
+  }
+  .container-svg > svg{
+    height:100vh;
+  }
+}
+
+ul,li,blockquote,p {
+  margin: 0;
+  padding: 0;
+  border: none;
+  list-style: none;
+}
+
+/* Start */
+
+.side::before,.side::after {
+    display: none;
+}
+
+.side .md > blockquote:last-of-type,
+.side .md > blockquote:last-of-type p,
+.side .md > blockquote:last-of-type a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-size: cover;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+}
+
+.side .md > blockquote:last-of-type {
+  background: url("https://images.pexels.com/photos/250177/pexels-photo-250177.jpeg") center center;
+  top: 4px;
+  height: 900px;
+  z-index: -1;
+  min-width: 900px
+}
+.side .md > blockquote:last-of-type p {
+  overflow: hidden;
+  left: -100px;
+  right: -100px;
+  perspective: 100px;
+  margin: 0;
+}
+.side .md > blockquote:last-of-type [href='#snow'] {
+  display: block;
+  height: 2000px;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/299775/snow-sparse-flipped.png);
+  animation: s 10s linear infinite;
+  background-size: auto;
+}
+.side .md > blockquote:last-of-type p{
+  animation: sw 5s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite alternate;
+    transform: translateX(-50px);
+}
+.side .md > blockquote:last-of-type p:nth-of-type(1) a {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/299775/snow-dense.png);
+    animation-duration: 11s;
+}
+
+.side .md > blockquote:last-of-type p:nth-of-type(4) a { 
+  animation-duration: 5s;
+  transform: translateZ(70px);
+  animation-name: sC;
+}
+
+.side .md > blockquote:last-of-type p:nth-of-type(1) {
+  animation-duration: 10s;
+}
+
+@keyframes sw {
+  to {
+    transform: translateX(50px);
+  }
+}
+
+@keyframes sC {
+  0% {
+    transform: translateY(-1000px) translateZ(70px);
+  }
+}
+
+@keyframes s {
+  0% {
+    transform: translateY(-1000px);
+  }
+}
