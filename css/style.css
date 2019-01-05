@@ -299,7 +299,9 @@ ul,li,blockquote,p {
   top: 4px;
   height: 900px;
   z-index: -1;
-  min-width: 900px
+  min-width: 900px;
+  -webkit-animation: rotate-vert-right 5s cubic-bezier(0.645, 0.045, 0.355, 1.000) both;
+	        animation: rotate-vert-right 5s cubic-bezier(0.645, 0.045, 0.355, 1.000) both;
 }
 .side .md > blockquote:last-of-type p {
   overflow: hidden;
@@ -349,5 +351,34 @@ ul,li,blockquote,p {
 @keyframes s {
   0% {
     transform: translateY(-1000px);
+  }
+}
+
+@-webkit-keyframes rotate-vert-right {
+  0% {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+    -webkit-transform-origin: right;
+            transform-origin: right;
+  }
+  100% {
+    -webkit-transform: rotateY(-360deg);
+            transform: rotateY(-360deg);
+    -webkit-transform-origin: right;
+            transform-origin: right;
+  }
+}
+@keyframes rotate-vert-right {
+  0% {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+    -webkit-transform-origin: right;
+            transform-origin: right;
+  }
+  100% {
+    -webkit-transform: rotateY(-360deg);
+            transform: rotateY(-360deg);
+    -webkit-transform-origin: right;
+            transform-origin: right;
   }
 }
